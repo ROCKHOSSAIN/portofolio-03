@@ -1,0 +1,645 @@
+/* ===================== */
+/* BASIC SETUP */
+/* ===================== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+/*text rendering   ===atar mean hocche lekha or sob kisu sundore present hobe better to know from google*/
+
+body{
+    font-family: 'Titillium Web', sans-serif;
+    text-rendering: optimizeLegibility;
+    line-height: 1.3rem;
+    font-size: 1.2rem;
+}
+/*    scrolll-behavior hocche johkon team,home,service etc e click kora hbe seta aste dhire smoothly jabe*/
+html{
+    font-size: 62.5%;
+scroll-behavior: smooth;
+}
+
+ul li{
+    list-style-type: none;
+}
+
+/*HEADER*/
+h1{
+    font-size: 4.2rem;
+    line-height: 4.2rem;
+    color: #fff;
+}
+
+
+/*focus outline hocche jokhon our portofolio section e all ,css , agulate click kore tokhon nil color border ase tai outline 0 dise*/
+:focus{
+    outline: 0;
+}
+
+
+/*clear both means left and right side e kono float thakbe na*/
+
+/* ===================== */
+/* REUSABLE COMPONENTS */
+/* ===================== */
+
+.row{
+    max-width: 114rem;
+    margin:0 auto;
+}
+section{
+    padding: 8rem 0 ;
+}
+h2{
+    font-size: 4rem;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+h2:after{
+    content:"";
+    display:block;
+    clear:both;
+    height:.4rem;
+    background: #fff;
+    width: 8.5rem;
+    margin: auto;
+    margin-top: 2rem;
+    background: #14a58c;
+}
+h3{
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    font-weight: 600; 
+    margin-bottom: 2rem;
+    color: #fff;
+}
+h4{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-top: 2.5rem;
+}
+.box{
+    padding: 1%;
+}
+.box p{
+    font-size: 1.6rem;
+    font-weight: 300;
+    margin-top: 2rem;
+    color: #fff;
+    line-height: 1.8rem;
+}
+
+/*Button*/
+
+.btn:link,
+.btn:visited,
+.btn{
+    background:#333;
+    border-bottom: .3rem solid #000;
+    color:#fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1.5rem 6.0rem;
+    border-radius: .3rem;
+    display: inline-block;
+    margin-top: 4.5rem;
+    font-size: 1.6rem; 
+}
+
+
+.btn:hover{
+	transition:all 1s;
+	transform:scale(0.8);
+	transform:rotate(360deg);
+	transition-delay:0.3s;
+}
+/*Paragraph*/
+
+
+.little-description{
+    font-size: 1.8rem;
+    width: 60%;
+    margin-left: 20%;
+    line-height: 3rem;
+}
+
+/* ===================== */
+/* Header Section  */
+/* ===================== */
+
+header{
+    background: linear-gradient(rgba(135, 80, 156, 0.9),rgba(135, 80 , 156 ,0.9)), url(img/blur-business-coffee-commerce-273222.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    height: 85vh;
+    position: relative;
+}
+.logo{
+    height: 3.5rem;
+    width: auto;
+    margin-top: 3.5rem;
+    float: left;
+}
+
+/*Main Navigation*/
+
+.main-nav{
+    float: right;
+    margin-top: 4.0rem;
+    padding: 1rem 0;
+
+}
+
+
+.main-nav li{
+    display: inline-block;
+    margin-left: 1.0rem;
+}
+.main-nav li:first-child{
+    margin-left:0;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited{
+    color:#fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: rgba(100 ,58 ,121 ,0);
+    padding: .5rem 1.6rem;
+    border-radius: .3rem;
+    display: inline-block;
+    font-size: 1.6rem;
+    transition: .3s;
+}
+.main-nav li:hover a:link,
+.main-nav li:hover a:visited{
+        background: rgba(100 ,58 ,121 ,1);
+
+}
+.main-nav li.active a{
+        background: rgba(100 ,58 ,121 ,1);
+
+}
+/*sticky navigation*/
+
+.sticky{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(143, 64, 173, 0.87);
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.9);
+    z-index: 9999;       
+/*   z index) deyar meain reason hocche upor er je sticky navigation ase seta croll down korar somoy bootstrap er gol gol gula mone hoy sticjky navigation er upor e uthe jay so thats way x index-9999 ato use kora hoyeche*/
+}
+.sticky .logo{
+    margin-top: 0;
+}
+.sticky .main-nav{
+    margin-top: .2rem;
+}
+
+
+/*akhane je transfom translate ase ata mainly upor niche 50% thik thak korar jonno    and position absolute and relative niye prb thakle note khaaty e lekha ase or besi prb hole 4 no psd video tar(18:30) sec e gele pabo */
+
+.hero-text-box{;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%); 
+    text-align: center;
+
+}
+.btn-hero:link,
+.btn-hero:visited{
+    background: #eb7d4b;
+    border-color: #c86a40;
+}
+
+/*Mobile Menu*/
+
+.mobile-menu span{
+    color: #fff;
+    font-size: 4rem;
+    float: right;
+    margin-top: 2rem;
+    display: none;
+}
+.mobile-menu span:hover{
+    cursor: pointer;
+}
+.overlay{
+    width: 0;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1;
+    overflow-x: hidden;
+    transition: .5s;
+}
+
+/* akhane pos:relative hocche jate aata niche neme ashe */
+/*akhane display block hocche jate shari akare sob ashe*/
+.overlay-content{
+    position: relative;
+    top: 10%;
+    width:100%;
+    text-align: center;
+}
+.overlay a{
+    text-decoration: none;
+    display: block;
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing:3px;
+    color: #999;
+    padding: 2rem 0;
+}
+.overlay a:hover{
+    color:#fff;
+}
+.overlay .closebtn{
+position: absolute;
+    top: 2rem;
+    right:4.5rem;
+    font-size: 4.5rem;
+}
+/* ===================== */
+/* Services Section  */
+/* ===================== */
+
+.services-section{
+    color:#fff;
+    text-align: center;
+    background: linear-gradient(rgba(23, 194, 164, 0.9),rgba(23, 194, 164, 0.9)), url(img/top-view-photo-of-people-near-wooden-table-3183150.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+        background-position:center top;
+   
+}
+.services-icon{
+    height: 12rem;
+    margin-top: 4.5rem;
+    margin-bottom: 3.5rem;
+}
+/* ===================== */
+/* Team Section  */
+/* ===================== */
+
+.team-section{
+    text-align: center;
+    background:linear-gradient(rgba(193, 213, 227, 0.9),rgba(231, 241, 248, 0.9)),url(img/people-meeting-workspace-team-7097.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-attachment: fixed;
+}
+.team-section h2{
+    color:#3c4761;
+}
+.team-section h2::after{
+    background: #c8d9e5;
+}
+.team-member{
+    margin-top: 4.5rem;
+    margin-bottom: 3.5rem;
+    height: 20rem;
+    width: 20rem;
+    border-radius:50%;
+}
+.team-section h3{
+    color: #27283d;
+}
+.role{
+    color: #30bae7;
+    font-size: 1.6rem;
+    text-transform: capitalize;
+    margin-top: .5rem;
+    display: inline-block;
+}
+.team-section .box p {
+    color: #3c4761;
+}
+.social-link{
+    margin-top: 4.5rem;
+}
+
+.social-link ul li{
+    display: inline-block;
+    margin: 0.5rem;
+}
+.social-link ul li a:link{
+    color:#fff;
+}
+.social-link ul li a:link i::before{
+    background:#bdd1df;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: inline-block;
+    font-size: 2rem;
+    padding: 1rem;
+    transition: .5s;
+}
+.social-link ul li a:hover i::before{
+    transform:rotate(360deg);
+}
+.fab.fa-instagram.icon01:hover {
+    color:#de4c95;
+}
+.fab.fa-facebook-square.icon02:hover {
+    color: rgba(34, 34, 211, 0.84);
+}
+.fab.fa-twitter.icon03:hover {
+    color: deepskyblue;
+}
+.fab.fa-whatsapp.icon05:hover {
+    color:#1eb41e;
+}
+.social-link, .fa, .fab, .fal, .far, .fas{
+    color:rgba(193, 36, 23, 0.96);
+}
+
+/* ===================== */
+/* SKILL SECTION */
+/* ===================== */
+
+
+/*START ANIMATED CIRCLE*/
+
+
+
+svg.radial-progress {
+  height: auto;
+  max-width: 200px;
+  padding: 1em;
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  width: 100%;
+}
+
+svg.radial-progress circle {
+  fill: rgba(0,0,0,0);
+  stroke: #fff;
+  stroke-dashoffset: 219.91148575129; 
+  stroke-width: 10;
+}
+
+svg.radial-progress circle.incomplete { opacity: 0.25; }
+
+svg.radial-progress circle.complete { stroke-dasharray: 219.91148575129; }
+
+svg.radial-progress text {
+  fill: #fff;
+  text-anchor: middle;
+}
+
+
+
+
+/*END ANIMATED CIRCLE*/
+
+
+.skill-section {
+    text-align: center;
+    background: linear-gradient(rgba(208, 194, 194, 0.85),rgba(214, 202, 202, 0.92)),url(img/flatlay-display-of-electronics-next-to-eyeglases-3184454.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.skill-section h2,
+.skill-section h3 {
+    color:#3c4761;
+}
+.skill-section h2::after {
+    background: #dfe8eb;
+}
+.skill-section .box{
+    margin-top: 4.5rem;
+}
+svg.radial-progress circle {
+    stroke-width:7.5;
+}
+svg.radial-progress text {
+    fill:#3c4761;
+    font-size: 1.5rem;
+}
+svg.web-design circle {
+    stroke:#30bae7;
+}
+svg.html-css circle {
+    stroke:#30bae7;
+}
+svg.graphic-design circle {
+    stroke:#30bae7;
+}
+svg.ui-ux circle {
+    stroke:#30bae7;
+}
+
+
+
+/* ===================== */
+/* PORTFOLIO SECTION */
+/* ===================== */
+
+.portfolio-section{
+    background:linear-gradient(rgba(240, 220, 178, 0.91),rgba(240, 218, 174, 0.91)),url(img/top-view-photo-of-people-near-wooden-table-3183150.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    text-align: center;
+}
+.portfolio-section h2{
+    color: #3c4761;
+}
+.portfolio-section h2::after{
+    background: #e5c37f;
+}
+.portfolio-filter{
+    margin: 4.5rem 0;
+}
+.portfolio-filter button{
+background: #ebc985;
+    font-size: 1.8rem;
+    padding: 1rem 2rem;
+    border:0;
+    border-radius: .5rem;
+    text-transform: uppercase;
+    color:#3c4761;
+    margin:0 .5rem;
+    transition: .5s;
+}
+/*box hadow er jonno inset use kora lagbe*/
+.portfolio-filter button:hover{
+    cursor: pointer;
+    box-shadow: inset 0 .4rem .5rem rgba(60, 71, 97, 0.5);
+}
+.portfolio-image{
+    width: 100%;
+    height:auto;
+}
+/*nth-child(3)  atar karon hocche 3 no picture e margin nisilo so  ai child indicate kore margin 0 korse*/
+.portfolio-section .col:nth-child(3){
+    margin:0;
+}
+.portfolio-section .btn-load-more{
+    background: #17c2a4;
+    border-color: #14a58c;
+}
+.row a .btn:hover{
+	transition:all 1s;
+	transform:scale(0.8);
+	transform:rotate(360deg);
+	transition-delay:0.3s;
+}
+/*hover e gele je white hoy setar jonno mixitup-control-active use kora lage inspect element e giye apps ,web agulate click korli ata auto dekha jay */
+.portfolio-section .mixitup-control-active{
+    background: #fff;
+}
+
+/* ===================== */
+/* testimonial SECTION */
+/* ===================== */
+
+
+.testimonial{
+    background:linear-gradient(rgba(191, 85, 128, 0.9),rgba(193, 85, 128, 0.9)) ,url(img/blank-business-composition-computer-373076.jpg);
+        background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.testimonial .little-description{
+    text-align: center;
+    color: #fff;
+}
+.testimonial .col:nth-child(3){
+    margin-left: 0;
+}
+.testimonial .col:nth-child(1),
+.testimonial .col:nth-child(2){
+margin-top: 4rem;
+}
+.testimonial .col:nth-child(3),
+.testimonial .col:nth-child(4){
+    margin-top: 8rem;
+}
+.client-photo{
+    width: 10rem;
+    float: left;
+}
+.client-photo img{
+    height: 8rem;
+    border-radius: 50%;
+    margin-bottom: 3rem;
+}
+.client-review{
+    width: 35rem;
+    float: left;
+}
+.client-review p{
+    font-size: 2.1rem;
+    font-style: italic;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    line-height: 2.2rem;
+}
+ .testimonial h2::after{
+    background: #b4357e;
+}
+.client-review .role{
+    color:#ffdf99;
+}
+
+
+
+/* ===================== */
+/* Contact SECTION */
+/* ===================== */
+
+.contact-section{
+    text-align: center;
+    background: linear-gradient(rgba(60, 84, 153, 0.9),rgba(60, 84, 153, 0.94)),url(img/close-up-of-leaf-326055.jpg);
+            background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+}
+.contact-section h2::after{
+    background: #273a71;
+}
+.contact-section .little-description{
+    color:#fff;
+}
+.contact-section form{
+    margin-top: 5rem;
+    width: 70%;
+    margin-left: 15%;
+}
+/*akhane text,email,massage aksathe dhorse */
+.contact-section input[type="text"],
+.contact-section input[type="email"],
+.contact-section textarea{
+    background: #273a71;
+    border: .2rem solid #712727;
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: .5rem;
+    font-size: 1.8rem;
+    color: #fff;
+    margin: .5rem 0;
+}
+/*akhane (::) ata mane placholder ke dhora*/
+.contact-section form  ::placeholder{
+    color: #fff ;
+    opacity: 1 ;
+}
+.btn-submit{
+border: 0;
+    border-bottom: .3rem solid #299ec5;
+    background: #38bae7;
+}
+.btn-submit{
+    cursor: pointer;
+}
+
+
+/* ===================== */
+/* FOOTER SECTION */
+/* ===================== */
+
+.footer-section{
+    background: #344b8e;
+    padding: 3rem 0;
+    text-align: center;
+    border-top:.1rem solid rgba(255, 255,255,0.3)
+    
+}
+.footer-section li{
+    display: inline-block;
+    margin:0 2rem;
+}
+.footer-section li a{
+color: #fff;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 2.4rem;
+}
+.footer-section li:hover a{
+    color: #30bae7;
+}
+
+
+/*icon*/
